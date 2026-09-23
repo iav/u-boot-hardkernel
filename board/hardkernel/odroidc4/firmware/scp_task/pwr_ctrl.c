@@ -29,7 +29,7 @@
 
 #define ARRAY_SIZE(x) (sizeof(x) / sizeof((x)[0]))
 
-unsigned int enable_wol = 0;   /* disable Wake-On-Lan by default*/
+unsigned int enable_wol = 1;   /* Wake-On-Lan: Linux arms the PHY, BL301 always listens */
 unsigned int enable_5V_system_power = 0;	/* disable 5V system power (USB) by default*/
 
 static void set_vddee_voltage(unsigned int target_voltage)
